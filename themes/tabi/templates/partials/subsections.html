@@ -1,0 +1,13 @@
+{%- if section.subsections | length > 0 -%}
+    <ul>
+        {%- for subsection_path in section.subsections -%}
+            {%- set subsection = get_section(path=subsection_path) -%}
+            <li>
+                <h2><a href="{{ subsection.permalink }}">{{ subsection.title }}</a></h2>
+                <p>{{ subsection.description }}</p>
+            </li>
+        {%- endfor -%}
+    </ul>
+{%- else -%}
+    <p>No subsections available.</p>
+{%- endif -%}

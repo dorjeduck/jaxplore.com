@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header(title=section.title) }}
+
+<div id="page-content">
+    <main>
+        <div class="user-content-above">
+            {{ section.content | split(pat="<!-- list -->") | first | safe }}
+        </div>
+
+        {% include "partials/subsections.html" %}
+
+        <div class="user-content-above">
+            {{ section.content | split(pat="<!-- list -->") | last | safe }}
+        </div>
+        
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}
+
+
+

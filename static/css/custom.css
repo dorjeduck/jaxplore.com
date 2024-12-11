@@ -1,0 +1,4 @@
+.img-inline {
+    display: inline; /* Ensure images stay inline */
+    vertical-align: middle; /* Aligns with the text baseline */
+}

@@ -1,0 +1,12 @@
+{%- if section.pages | length > 0 -%}
+    <ul>
+        {%- for page in section.pages -%}
+            <li>
+                <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+                <p>{{ page.description }}</p>
+            </li>
+        {%- endfor -%}
+    </ul>
+{%- else -%}
+    <p>No pages available in this section.</p>
+{%- endif -%}
