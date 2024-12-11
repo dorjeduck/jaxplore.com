@@ -6,7 +6,7 @@
     
 </p>
 
-Source code of [jaxplore.com]("https://jaxplore.com"). Made with
+Source code of [jaxplore.com](https://jaxplore.com). Made with
 
-* [Zola](href="https://www.getzola.org/")
-* [Tabi]("https://github.com/welpo/tabi")
+* [Zola](https://www.getzola.org/)
+* [Tabi](https://github.com/welpo/tabi)
