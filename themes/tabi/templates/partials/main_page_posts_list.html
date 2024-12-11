@@ -1,7 +1,7 @@
 {%- if paginator or extra_section -%}
     <div id="posts-list">
         <div>
-            {{ macros_page_header::page_header(title=section.title) }}
+            {{ macros_page_header::page_header_deluxe(section=section) }}
         </div>
 
         {# Check if both paginate_by and section_path are set #}

@@ -1,8 +1,8 @@
 +++
-title = "Latest posts"
+title = "Home"
 
 [extra]
-header = { title = "explore ~ exploit", img = "img/logo.png", img_alt = "yeah" }
+header = { title = "explore ~ exploit", img = "", img_alt = "yeah" }
 path = "about.md"
 max_posts = 5
 +++

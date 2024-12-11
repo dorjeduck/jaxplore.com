@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header_deluxe(section=section) }}
+
+
+<div id="page-content">
+    <main>
+        <div>
+            {{ section.description }}
+        </div>
+        <br>
+
+        <div class="subsections">
+            {% for subsection_path in section.subsections %}
+            {% set subsection = get_section(path=subsection_path) %}
+            <div class="subsection">
+                <h2>{{ subsection.title }}</h2>
+                <p>{{ subsection.description }}</p>
+
+                <ul>
+                    {% for page in subsection.pages %}
+
+                    <li>
+
+                        <h3><a href="https://github.com/{{ page.extra.github_repo }}">{{ page.title }}</a>&nbsp;
+
+                            <img class="img-inline"
+                                src="https://img.shields.io/github/stars/{{ page.extra.github_repo }}?style=social"
+                                alt="GitHub Stars for {{ page.title }}">
+                        </h3>
+
+                        <p>{{ page.description }}</p>
+
+                        {{ page.content | safe }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}

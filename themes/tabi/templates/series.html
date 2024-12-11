@@ -30,7 +30,7 @@
         <a href="#posts-list" class="jump-link">{{ macros_translate::translate(key="jump_to_posts", default="Jump to posts", language_strings=language_strings) }} ↓</a>
     </div>
     {%- else -%}
-        {{ macros_page_header::page_header(title=section.title) }}
+        {{ macros_page_header::page_header_deluxe(section=section) }}
     {%- endif -%}
 
     <section class="body">

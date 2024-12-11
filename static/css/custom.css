@@ -2,3 +2,42 @@
     display: inline; /* Ensure images stay inline */
     vertical-align: middle; /* Aligns with the text baseline */
 }
+
+.video-date {
+    color: gray;
+}
+
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    margin-bottom: -0.5rem;
+    color: #666;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumbs li {
+    display: inline;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+}
+
+
+
+.breadcrumbs li::after {
+    content: ">";
+    margin-left: 0.5rem;
+    color: #aaa;
+}
+
+.breadcrumbs li:last-child::after {
+    content: "";
+}

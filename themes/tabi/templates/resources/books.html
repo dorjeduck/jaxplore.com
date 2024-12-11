@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header_deluxe(section=section) }}
+
+
+<div id="page-content">
+    <main>
+        <div>
+            {{ section.description }}
+        </div>
+        <br>
+
+        <div class="subsections">
+            {% for subsection_path in section.subsections %}
+            {% set subsection = get_section(path=subsection_path) %}
+            <div class="subsection">
+                <h2>{{ subsection.title }}</h2>
+                <p>{{ subsection.description }}</p>
+
+                <ul>
+                    {% for page in subsection.pages %}
+                    <li>
+                        <h3>
+                            {% if page.extra.asin %}
+                                <a href="https://www.amazon.com/dp/{{ page.extra.asin }}">{{ page.title }}</a>
+                            {% elif page.extra.web %}
+                                <a href="{{ page.extra.web }}">{{ page.title }}</a>
+                            {% else %}
+                                {{ page.title }}
+                            {% endif %}
+                        </h3>
+                        <p>
+                            <strong>Author:</strong> {{ page.extra.author }}<br>
+                            <strong>Published:</strong> {{ page.date | date(format="%B %Y") }}
+                        </p>
+                        <p>{{ page.description }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}
