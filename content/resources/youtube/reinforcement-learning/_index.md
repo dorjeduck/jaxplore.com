@@ -1,6 +1,6 @@
 +++
 title = "Reinforcement Learning"
-description = "the juicy stuff"
+description = "Videos diving into reinforcement learning concepts and applications."
 weight = 2
-sort_by = "slug"
+sort_by = "date"
 +++

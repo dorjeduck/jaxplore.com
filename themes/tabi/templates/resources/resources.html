@@ -6,12 +6,14 @@
 
 <div id="page-content">
     <main>
+       
         <div class="user-content-above">
             {{ section.content | split(pat="<!-- list -->") | first | safe }}
         </div>
-
+        
+       
         {% include "partials/subsections.html" %}
-
+        
         <div class="user-content-above">
             {{ section.content | split(pat="<!-- list -->") | last | safe }}
         </div>

@@ -9,7 +9,7 @@
         <div>
             {{ section.description }}
         </div>
-
+        <br>
         <div class="subsections">
             {% for subsection_path in section.subsections %}
             {% set subsection = get_section(path=subsection_path) %}

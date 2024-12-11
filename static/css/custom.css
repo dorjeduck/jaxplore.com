@@ -7,6 +7,9 @@
     color: gray;
 }
 
+.user-content-above {
+    margin-bottom: 2.5rem;
+}
 
 .breadcrumbs {
     font-size: 0.9rem;

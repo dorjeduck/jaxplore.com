@@ -1,7 +1,7 @@
 +++
 title = "Resources"
 description = "An evolving collection of resources to explore JAX in Reinforcement Learning—and beyond."
-template="resources.html"
+template="resources/resources.html"
 sort_by = "weight"
 +++
 
