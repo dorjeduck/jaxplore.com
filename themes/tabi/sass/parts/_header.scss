@@ -100,6 +100,48 @@ header {
     }
 }
 
+.meta2 {
+    padding: 0;
+    padding-top: 0.7vmin;
+    padding-bottom: 1vmin;
+    color: var(--meta-color);
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.4px;
+
+    a {
+        color: var(--meta-color);
+        font-weight: inherit;
+        text-decoration: none;
+        text-decoration-color: none;
+    }
+
+    ul,
+    li {
+        display: inline-block;
+        margin-inline-end: 0.2rem;
+        font-family: var(--sans-serif-font);
+        list-style-type: none;
+    }
+
+    .tag {
+        margin-inline-end: 0;
+    }
+
+    .separator {
+        margin-inline-end: 0.2rem;
+        user-select: none;
+    }
+}
+
+
+
+
+
+
+
+
 .language-switcher {
     display: flex;
     justify-content: center;
