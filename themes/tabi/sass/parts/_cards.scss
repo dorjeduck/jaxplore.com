@@ -27,12 +27,14 @@
             text-decoration: none;
 
             &:hover {
-                background: var(--primary-color);
+                background: var(--background-color);
+
                 color: var(--hover-color);
             }
 
             &.active {
-                background: var(--primary-color);
+                background: var(--background-color);
+
                 color: var(--hover-color);
             }
         }
@@ -54,9 +56,12 @@
         min-height: 100px;
         overflow: hidden;
 
+        
         &:hover {
-            background-color: var(--primary-color);
+            background-color: var(--background-color);
+
         }
+        
 
         &:hover .card-description {
             color: var(--hover-color);

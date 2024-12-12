@@ -78,7 +78,8 @@ pre {
             position: absolute;
             top: 0;
             inset-inline-start: 0;
-            background-color: var(--primary-color);
+            background-color: var(--background-color);
+
             padding: 0.3rem;
             padding-inline-start: 1rem;
             width: calc(100% - 1.3rem);
