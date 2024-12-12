@@ -87,6 +87,11 @@ a:hover {
     color: var(--hover-color);
 }
 
+a.home-logo:hover {
+    background-color: var(--background-color);
+}
+
+
 a:hover rt {
     color: initial;
 }

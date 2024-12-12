@@ -145,7 +145,7 @@ paginator="", pinned_first=false, current_page=1) %}
                     <li class="tag"><a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=lang) | safe }}">{{ tag
                             }}</a>
                         {%- if not loop.last -%}
-                        ,
+                        ,&nbsp;
                         {%- endif -%}
                     </li>
                     {%- endfor -%}

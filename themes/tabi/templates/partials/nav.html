@@ -1,8 +1,15 @@
 <header>
     <nav class="navbar">
         <div class="nav-title">
-            <a class="home-title" href="{{ get_url(path='/', lang=lang) }}">{{ config.title }}</a>
+            <a class="home-logo" href="{{ get_url(path='/', lang=lang) }}">
+            <img src="/img/logo-light.svg" alt="Logo Light" class="logo logo-light">
+            <img src="/img/logo-dark.svg" alt="Logo Dark" class="logo logo-dark">  
+            </a>     
+            <a class="home-title" href="{{ get_url(path='/', lang=lang) }}">
+                {{ config.title }}</a>
         </div>
+
+        
 
         {%- if config.extra.menu %}
             <div class="nav-navs">

@@ -1,14 +1,54 @@
 .img-inline {
-    display: inline; /* Ensure images stay inline */
-    vertical-align: middle; /* Aligns with the text baseline */
+    display: inline;
+    /* Ensure images stay inline */
+    vertical-align: middle;
+    /* Aligns with the text baseline */
 }
 
 .video-date {
     color: gray;
 }
 
-.extra-top-margin
- {
+.nav-title {
+    
+    display: flex;
+    /* Align items horizontally */
+    align-items: center;
+    /* Vertically center items */
+    gap: 10px;
+    /* Add some space between the text and the logo */
+}
+
+
+.logo {
+    display: none;
+    /* Hide logos by default */
+    height: 2.9rem;
+    width: auto;
+    margin-right: 0.2rem;
+    margin-top: 0.3em;
+     /* Adjust as needed */
+}
+
+.logo-light {
+    display: block;
+    /* Show light logo by default */
+}
+
+.logo-dark {
+    display: none;
+    /* Hide dark logo initially */
+}
+
+html[data-theme='dark'] .logo-light {
+    display: none;
+}
+
+html[data-theme='dark'] .logo-dark {
+    display: block;
+}
+
+.extra-top-margin {
     margin-top: 0.5rem;
 }
 
@@ -49,3 +89,8 @@
 .breadcrumbs li:last-child::after {
     content: "";
 }
+
+
+
+
+
