@@ -2,7 +2,7 @@
 
 {% block main_content %}
 
-{{ macros_page_header::page_header(title=term.name) }}
+{{ macros_page_header::tag_page_header_deluxe(title="Tag: " ~ term.name, tag=term.name)}}
 
 {% set max = section.extra.max_posts | default(value=999999) %}
 {{ macros_list_posts::list_posts(posts=term.pages, max=max, language_strings=language_strings) }}

@@ -1,9 +1,9 @@
 +++
-title = "Home"
+title = "Latest Posts"
 
 [extra]
 header = { title = "explore ~ exploit", img = "", img_alt = "yeah" }
-path = "about.md"
+section_path = "blog/_index.md"
 max_posts = 5
 +++
 

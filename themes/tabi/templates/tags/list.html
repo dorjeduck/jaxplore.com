@@ -4,7 +4,7 @@
 
 {%- set title = macros_translate::translate(key="all_tags", default="All tags", language_strings=language_strings) -%}
 
-{{ macros_page_header::page_header(title=title)}}
+{{ macros_page_header::tag_page_header_deluxe(title=title)}}
 
 {% set tag_count = terms | length %}
 {% if config.extra.tag_sorting == "frequency" %}

@@ -29,3 +29,32 @@
     </ul>
 </nav>
 {% endmacro page_header_deluxe %}
+
+
+
+{% macro tag_page_header_deluxe(title,tag="") %}
+<h1 class="title-container section-title bottom-divider">
+    {{title}}
+</h1>
+<nav class="breadcrumbs">
+    <ul>
+        <!-- Always Start with "Home" -->
+        <li><a href="{{ config.base_url }}">Home</a></li>
+
+        <!-- Loop Through Ancestors and Skip the First -->
+
+        {% if tag != "" %}
+
+        <li>
+            <a href="/tags">Tags</a>
+        </li>
+        <li>{{ tag }}</li>
+        {% else %}
+        <li>Tags</li>
+        {% endif %}
+
+        
+
+    </ul>
+</nav>
+{% endmacro page_header_deluxe %}
