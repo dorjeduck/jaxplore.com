@@ -12,7 +12,7 @@ spacing = 5  # Space between squares
 
 # Split text into lines
 text = sys.argv[1].upper()  # Convert input text to uppercase
-lines = text.split("-")
+lines = text.split("_")
 max_line_length = max(len(line) for line in lines)
 
 # Space between lines multiplier
@@ -235,6 +235,7 @@ def get_letter_grid(letter):
         ],
         "Y": [(0, 0), (0, 2), (1, 1), (2, 1), (3, 1), (4, 1)],
         "Z": [(0, 0), (0, 1), (0, 2), (1, 2), (2, 1), (3, 0), (4, 0), (4, 1), (4, 2)],
+        "-": [(2, 0), (2, 1), (2, 2)],
     }
     return grids.get(letter.upper(), [])
 

@@ -3,7 +3,7 @@
         <div>{%- if section.path != "/" -%}
             {{ macros_page_header::page_header_deluxe(section=section) }}
             {%- else -%}
-            <h1>{{ section.title }}</h1>
+            <h1 class="bottom-divider">{{ section.title }}</h1>
             {%- endif -%}
         </div>
         </div>
