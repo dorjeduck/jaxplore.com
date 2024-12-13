@@ -24,15 +24,21 @@
                     <li>
                         <h3>
                             {% if page.extra.asin %}
-                                <a href="https://www.amazon.com/dp/{{ page.extra.asin }}">{{ page.title }}</a>
+                            <a href="https://www.amazon.com/dp/{{ page.extra.asin }}">{{ page.title }}</a>
                             {% elif page.extra.web %}
-                                <a href="{{ page.extra.web }}">{{ page.title }}</a>
+                            <a href="{{ page.extra.web }}">{{ page.title }}</a>
                             {% else %}
-                                {{ page.title }}
+                            {{ page.title }}
                             {% endif %}
                         </h3>
                         <p>
-                            <strong>Author:</strong> {{ page.extra.author }}<br>
+
+                            {% if page.extra.authors %}
+                            <strong>Authors:</strong> {{ page.extra.authors }}
+                            {% elif page.extra.author %}
+                            <strong>Author:</strong> {{ page.extra.author }}
+                            {% endif %}
+                            <br>
                             <strong>Published:</strong> {{ page.date | date(format="%B %Y") }}
                         </p>
                         <p>{{ page.description }}</p>
