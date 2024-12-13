@@ -94,9 +94,10 @@ paginator="", pinned_first=false, current_page=1) %}
             {%- endif -%}
             {%- endif -%}
             {%- endif -%}
-
+    
             {% if post.extra.local_image or post.extra.remote_image %}
             <li class="post-thumbnail">
+               
                 <a href="{{ post.permalink }}">
                     {% if post.extra.local_image %}
                     {% set meta = get_image_metadata(path=post.extra.local_image, allow_missing=true) %}
@@ -115,10 +116,13 @@ paginator="", pinned_first=false, current_page=1) %}
             <li class="draft-label">{{ macros_translate::translate(key="draft", default="DRAFT",
                 language_strings=language_strings) }}</li>
             {% endif %}
+            
         </ul>
+       
         </section>
-
+        
         <section class="bloglist-content {% if bottom_divider -%}bottom-divider{%- endif -%}">
+          
             <div>
                 {% if pinned_first and post.extra.pinned %}
                 <div class="pinned-label">
