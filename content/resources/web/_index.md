@@ -1,6 +1,6 @@
 +++
 title = "Web"
-description = "A categorized collection of web resources on JAX and Reinforcement Learning."
+description = "Beyond Github and YouTube .."
 sort_by = "weight"
 weight = 3
 template = "resources/web.html"
