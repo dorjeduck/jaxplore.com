@@ -74,9 +74,9 @@
             text-align: center;
         }
         .card-image {
-            $margin: 1.6rem;
+            $margin: 1.7rem;
             margin: $margin;
-            margin-bottom: $margin / 1.5;
+            margin-bottom: 1.1rem;
             width: calc(100% - $margin * 2);
             height: auto;
         }
@@ -90,6 +90,7 @@
             margin-top: 0.5em;
             overflow: hidden;
             color: var(--text-color);
+            margin-bottom: 1.1rem;
         }
     }
 }
