@@ -1,18 +1,33 @@
 import sys
 from PIL import Image, ImageDraw
+import argparse
 
 # Check for correct usage
 if len(sys.argv) < 2:
-    print("Usage: python generate_logo.py <text>")
+    print("Usage: python generate_logo-multiline.py <text>")
     sys.exit(1)
 
 # Fixed image width and spacing
-img_width = 1000
-spacing = 5  # Space between squares
+# Parse command line arguments
+parser = argparse.ArgumentParser(description="Generate a logo from text.")
+parser.add_argument("text", help="Text to generate the logo from")
+parser.add_argument("--width", type=int, default=1000, help="Width of the image")
+parser.add_argument("--spacing", type=int, default=5, help="Spacing between squares")
+parser.add_argument(
+    "--always_blue_first",
+    action="store_true",
+    help="Always use blue color for the first square",
+)
+args = parser.parse_args()
+
+# Assign parsed arguments to variables
+img_width = args.width
+spacing = args.spacing
+ALWAYS_BLUE_FIRST = args.always_blue_first
 
 # Split text into lines
 text = sys.argv[1].upper()  # Convert input text to uppercase
-lines = text.split("-")
+lines = text.split("_")
 max_line_length = max(len(line) for line in lines)
 
 # Space between lines multiplier
@@ -250,19 +265,27 @@ y_offset = (
     )
 ) // 2  # Vertical centering
 
-for line in lines:
+n = 0
+for i, line in enumerate(lines):
     line_width = len(line) * (3 * square_size + 4 * spacing) - spacing
     x_offset = (img_width - line_width) // 2  # Horizontal centering for each line
-    for i, letter in enumerate(line):
+    for j, letter in enumerate(line):
+
         grid = get_letter_grid(letter)
         for y, x in grid:
-            color = colors[(i) % len(colors)]
+            color = (
+                colors[j % len(colors)]
+                if ALWAYS_BLUE_FIRST
+                else colors[n % len(colors)]
+            )
+
             x1 = x_offset + x * (square_size + spacing)
             y1 = y_offset + y * (square_size + spacing)
             x2 = x1 + square_size
             y2 = y1 + square_size
             draw.rectangle([x1, y1, x2, y2], fill=color)
-        x_offset += 3 * square_size + 4 * spacing  # Add spacing between letters
+        x_offset += 3 * square_size + 4 * spacing
+        n += 1  # Add spacing between letters
     y_offset += (
         5 * (square_size + spacing) + line_spacing_multiplier * spacing
     )  # Move to next line with additional spacing

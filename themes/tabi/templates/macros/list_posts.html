@@ -100,12 +100,27 @@ paginator="", pinned_first=false, current_page=1) %}
                
                 <a href="{{ post.permalink }}">
                     {% if post.extra.local_image %}
-                    {% set meta = get_image_metadata(path=post.extra.local_image, allow_missing=true) %}
-                    <img class="thumbnail-image" alt="{{ post.extra.local_image }}"
-                        src="{{ get_url(path=post.extra.local_image) }}" {% if meta.width %}width="{{ meta.width }}" {%
+
+                    {% set image_path = post.extra.local_image %}
+
+                    {% set dark_image_path = post.extra.local_image | replace(from=".svg", to="-dark.svg") | replace(from=".jpg", to="-dark.jpg") | replace(from=".png", to="-dark.png") %}
+                    {% set dark_image_meta = get_image_metadata(path=dark_image_path, allow_missing=true) %}
+                    
+                    {% if not dark_image_meta %}
+                        {% set dark_image_path = image_path  %}
+                    {% endif %}
+                    {% set meta = get_image_metadata(path=image_path, allow_missing=true) %}
+                    <img class="thumbnail-image img-light" alt="{{ image_path }}"
+                        src="{{ image_path }}" {% if meta.width %}width="{{ meta.width }}" {%
                         endif %} {% if meta.height %}height="{{ meta.height }}" {% endif %}>
-                    {% elif post.extra.remote_image %}
-                    <img class="thumbnail-image" alt="{{ post.extra.remote_image }}"
+                    <img class="thumbnail-image img-dark" alt="{{ dark_image_path }}"
+                        src="{{ dark_image_path }}" {% if meta.width %}width="{{ meta.width }}" {%
+                        endif %} {% if meta.height %}height="{{ meta.height }}" {% endif %}>
+                    
+                        {% elif post.extra.remote_image %}
+                    
+                    
+                        <img class="thumbnail-image" alt="{{ post.extra.remote_image }}"
                         src="{{ post.extra.remote_image }}">
                     {% endif %}
                 </a>
