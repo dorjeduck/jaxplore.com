@@ -150,7 +150,7 @@ footnote_backlinks = false
 
 # Enable KaTeX for all posts.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-katex = false
+katex = true
 
 # Enable Mermaid diagrams for all posts.
 # Loads ~2.5MB of JavaScript.
@@ -231,7 +231,8 @@ invert_title_order = false
 
 menu = [
     { name = "resources", url = "resources", trailing_slash = true},
-    { name = "projects", url = "projects", trailing_slash = true},
+    #{ name = "projects", url = "projects", trailing_slash = true},
+    { name = "notes", url = "notes", trailing_slash = true},
     { name = "blog", url = "blog", trailing_slash = true },
     { name = "about", url = "about", trailing_slash = true },
 ]
