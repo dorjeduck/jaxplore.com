@@ -5,7 +5,7 @@ template = "resources/notes.html"
 sort_by = "slug"
 +++
 
-Personal notes ...
+Personal notes - enhanced with authoritative source links to make it useful for you too (continuously updated).
 
 <!-- list -->
 
