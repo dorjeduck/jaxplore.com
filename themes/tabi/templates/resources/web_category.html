@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header_deluxe(section=section) }}
+
+<div id="page-content">
+    <main>
+        <div>
+            {{ section.description }}
+        </div>
+        <br>
+        <div class="subsections">
+
+            <ul>
+                {% for page in section.pages %}
+                <li>
+                    <h3><a href="{{ page.extra.web }}" target="_blank">{{ page.title }}</a></h3>
+                    <p>{{ page.description }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}

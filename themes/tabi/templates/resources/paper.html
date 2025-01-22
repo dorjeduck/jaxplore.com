@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header_deluxe(section=page) }}
+
+<div id="page-content">
+    <main>
+        
+
+        <!-- Paper Title and Link -->
+        <h3>
+            {% if page.extra.web %}
+            <a href="{{ page.extra.web }}" target="_blank">{{ page.title }}</a>
+            {% else %}
+            {{ page.title }}
+            {% endif %}
+        </h3>
+      
+        <!-- Authors -->
+        {% if page.extra.authors %}
+        <strong>Authors:</strong> {{ page.extra.authors }}
+        {% elif page.extra.author %}
+        <strong>Author:</strong> {{ page.extra.author }}
+        {% endif %}
+
+        <!-- Date -->
+        {% if page.date %}
+        <br><strong>Published:</strong> {{ page.date | date(format="%B %Y") }}
+        {% endif %}
+
+        <!-- Description -->
+        {% if page.description %}
+        <p>{{ page.description }}</p>
+        {% endif %}
+
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header_deluxe(section=section) }}
+
+<div id="page-content">
+    
+    <main>
+        
+        <div>
+            {{ section.description }}
+        </div>
+        <br>
+        <div class="subsections">
+            <ul>
+                {% for page in section.pages %}
+                <li>
+                    <h3>
+                        {% if page.extra.video %}
+                        <a href="https://www.youtube.com/watch?v={{ page.extra.video }}">{{ page.title }}</a>
+                        {% elif page.extra.playlist %}
+                        <a href="https://www.youtube.com/playlist?list={{ page.extra.playlist }}">{{ page.title
+                            }}</a>
+                        {% endif %}
+                    </h3>
+                    <p>
+                        <a href="https://www.youtube.com/channel/{{ page.extra.channel }}">@{{ page.extra.channel
+                            }}</a>,
+                        <span class="video-date">{{ page.date | date(format="%B %Y") }}</span>
+                    </p>
+
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
+
+
+        </div>
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}

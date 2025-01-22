@@ -13,14 +13,9 @@
        <br>
 
         <div class="subsections">
-            {% for subsection_path in section.subsections %}
-            {% set subsection = get_section(path=subsection_path) %}
-            <div class="subsection">
-                <h2><a href="{{subsection.permalink}}">{{ subsection.title }}</a></h2>
-                <p>{{ subsection.description }}</p>
-
+           
                 <ul>
-                    {% for page in subsection.pages %}
+                    {% for page in section.pages %}
 
                     <li>
 
@@ -37,9 +32,7 @@
                     </li>
                     {% endfor %}
                 </ul>
-            </div>
-            <br>
-            {% endfor %}
+            
         </div>
     </main>
 </div>

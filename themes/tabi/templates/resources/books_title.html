@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header_deluxe(section=page) }}
+
+
+<div id="page-content">
+    <main>
+        <div>
+
+            <h3>
+                {% if page.extra.asin %}
+                <a href="https://www.amazon.com/dp/{{ page.extra.asin }}">{{ page.title }}</a>
+                {% elif page.extra.web %}
+                <a href="{{ page.extra.web }}">{{ page.title }}</a>
+                {% else %}
+                {{ page.title }}
+                {% endif %}
+            </h3>
+            <p>
+
+                {% if page.extra.authors %}
+                <strong>Authors:</strong> {{ page.extra.authors }}
+                {% elif page.extra.author %}
+                <strong>Author:</strong> {{ page.extra.author }}
+                {% endif %}
+                <br>
+                <strong>Published:</strong> {{ page.date | date(format="%B %Y") }}
+            </p>
+            <p>{{ page.description }}</p>
+
+
+        </div>
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}
