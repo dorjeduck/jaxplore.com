@@ -1,12 +1,12 @@
 +++
 title = "Algorithms"
-description = "Reinforcement Algorithms"
+description = "Reinforcement Learning Algorithms"
 sort_by = "slug"
 weight = 2
 template = "resources/algorithms.html"
 +++
 
-### Taxonomy of Reinforcement Algorithms
+### Taxonomy of Reinforcement Learning Algorithms
 
 
 ![taxonmy_of_rl_algorithm](/img/rl_algorithm.svg)

@@ -10,17 +10,28 @@
             {{ section.description }}
         </div>
         <br>
-        <ul>
+        <!-- Table of Contents -->
+        <nav id="toc">
+            <h2>Papers:</h2>
+            
+            <ul>
             {% for page in section.pages %}
-            <li>
+            <li><a href="#{{ page.title | slugify }}">{{ page.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </nav>
+        <br>
+      
+            {% for page in section.pages %}
+           
                 <!-- Paper Title and Link -->
-                <h3>
+                <h2 id="{{ page.title | slugify }}">
                     {% if page.extra.web %}
                         <a href="{{ page.extra.web }}" target="_blank">{{ page.title }}</a>
                     {% else %}
                         {{ page.title }}
                     {% endif %}
-                </h3>
+                </h2>
 
                 <!-- Authors -->
                 {% if page.extra.authors %}
@@ -33,14 +44,18 @@
                 {% if page.date %}
                     <br><strong>Published:</strong> {{ page.date | date(format="%B %Y") }}
                 {% endif %}
+                {% if page.extra.web %}
+                    <br><strong>Link: </strong> <a href="{{ page.extra.web }}" target="_blank">{{ page.extra.web }}</a>
+                {% endif %}
+
 
                 <!-- Description -->
                 {% if page.description %}
-                    <p>{{ page.description }}</p>
+                    <p><strong>Abstract</strong>: {{ page.description | safe}}</p>
                 {% endif %}
-            </li>
+          <br>
             {% endfor %}
-        </ul>
+     
     </main>
 </div>
 

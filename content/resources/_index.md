@@ -9,4 +9,3 @@ An evolving collection of resources to explore JAX in Reinforcement Learning—a
 
 <!-- list -->
 
-I update this collection of resources as I come across new discoveries. Suggestions for expanding it are always welcome.

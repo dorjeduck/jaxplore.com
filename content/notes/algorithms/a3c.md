@@ -5,7 +5,3 @@ description = "A3C, Asynchronous Advantage Actor Critic, is a policy gradient al
 [extra]
 links = ["https://paperswithcode.com/method/a3c"]
 +++
-
-* Parallel learning algorithm where multiple independent worker agents explore different environment variations concurrently, each with slightly different network parameters.
-* Workers update a global network asynchronously, allowing for more diverse exploration and faster learning across different environment instances.
-* Enables more efficient and robust learning by leveraging parallel computation and reducing the correlation between training samples through independent worker experiences.
