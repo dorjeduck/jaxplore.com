@@ -2,10 +2,10 @@
 title = "Notes"
 description = "Personal notes ..."
 template = "resources/notes.html"
-sort_by = "slug"
+sort_by = "weight"
 +++
 
-Personal notes - enhanced with authoritative source links to make it useful for you too (continuously updated).
+Personal notes - enhanced with links to authoritative sources to make it useful for you too (continuously updated).
 
 <!-- list -->
 

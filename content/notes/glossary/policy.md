@@ -1,5 +1,6 @@
 +++
 title = "Policy"
+template = "resources/glossary_item.html"
 
 [extra]
 links = ["https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#policies"]

@@ -1,5 +1,6 @@
 +++
 title = "Markov Decision Processes"
+template = "resources/glossary_item.html"
 
 [extra]
 links=["https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#optional-formalism","https://www.geeksforgeeks.org/markov-decision-process/","https://en.wikipedia.org/wiki/Markov_decision_process"]
