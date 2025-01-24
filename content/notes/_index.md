@@ -5,7 +5,7 @@ template = "resources/notes.html"
 sort_by = "weight"
 +++
 
-Personal Notes, mostly collected from authoritative sources (links included).
+Personal notes, mostly collected from authoritative sources (links included).
 
 <!-- list -->
 
