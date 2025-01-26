@@ -11,12 +11,18 @@ template = "about/about.html"
 
 <br>
 
-Resources and ideas about Reinforcement Learning using JAX. Contribution are most welcome. See the [contribution guide](./contribution) for details. 
+Resources and ideas about Reinforcement Learning using JAX. 
 
+<br>
+
+## Contribution
+
+Contributions are most welcome! See the [contribution guide](./contribution) for details.  
+
+<br>
 
 ## Contact
 
-Find me on [github](https://github.com/dorjeduck) or email me at `martin.dudek [at] gmail [dot] com`.
-
+Reach out on [GitHub](https://github.com/dorjeduck) or email me at `martin.dudek [at] gmail [dot] com`. All feedback and ideas are appreciated!
 
 
