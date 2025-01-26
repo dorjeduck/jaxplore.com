@@ -1,6 +1,6 @@
 +++
 title = "Quantile Regression DQN (QR-DQN)"
-template = "resources/algorithm.html"
+template = "notes/algorithm.html"
 description = "Quantile Regression DQN (QR-DQN) builds on Deep Q-Network (DQN) and make use of quantile regression to explicitly model the distribution over returns, instead of predicting the mean return (DQN)."
 
 [extra]

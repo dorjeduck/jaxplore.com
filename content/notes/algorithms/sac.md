@@ -1,6 +1,6 @@
 +++
 title = "Switchable Atrous Convolution (SAC)"
-template = "resources/algorithm.html"
+template = "notes/algorithm.html"
 description = "Switchable Atrous Convolution (SAC) softly switches the convolutional computation between different atrous rates and gathers the results using switch functions. The switch functions are spatially dependent, i.e., each location of the feature map might have different switches to control the outputs of SAC."
 
 [extra]

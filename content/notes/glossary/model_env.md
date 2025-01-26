@@ -1,6 +1,6 @@
 +++
 title="Model of the Environment "
-template = "resources/glossary_item.html"
+template = "notes/glossary_item.html"
 
 [extra]
 links = ["https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html#model-free-vs-model-based-rl"]

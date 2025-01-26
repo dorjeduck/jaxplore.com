@@ -1,7 +1,7 @@
 +++
 title = "Notes"
 description = "Personal notes ..."
-template = "resources/notes.html"
+template = "notes/notes.html"
 sort_by = "weight"
 +++
 

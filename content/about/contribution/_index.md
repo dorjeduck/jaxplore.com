@@ -1,31 +1,18 @@
 +++
-title = "About"
-template = "info-page.html"
+title = "How to contribute"
+template = "about/about.html"
 +++
- 
-> Nothing we see or hear is perfect.  
-> But right there in the imperfection  
-> is perfect reality.  
->
-> — Shunryu Suzuki
 
-<br>
-
-Resources and ideas about Reinforcement Learning using JAX
-
-<br>
-
-
-## How to Contribute
 
 Welcome to **jaxplore.com**—a [Zola](https://www.getzola.org/)-based site! Contributions for the **resources** and **notes** sections are very welcome, whether you're adding new content or improving existing materials.
 
 ### Repository and Content Location
 
+
 - **Source Code:** [https://github.com/dorjeduck/jaxplore.com](https://github.com/dorjeduck/jaxplore.com)  
-- **Content Files:**  
-  - `content/resources` and subfolders  
-  - `content/notes` and subfolders  
+- **Content Files:** 
+  - [content/resources](https://github.com/dorjeduck/jaxplore.com/tree/main/content/resources)  
+  - [content/notes](https://github.com/dorjeduck/jaxplore.com/tree/main/content/notes)
 
 <br>
 
@@ -88,11 +75,3 @@ Welcome to **jaxplore.com**—a [Zola](https://www.getzola.org/)-based site! Con
 * No Zola-specific skills needed
 
 Thank you for contributing!  
-
-<br>
-
-## Contact
-
-[https://github.com/dorjeduck](https://github.com/dorjeduck)
-
-

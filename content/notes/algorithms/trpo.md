@@ -1,6 +1,6 @@
 +++
 title = "Trust Region Policy Optimization (TRPO):"
-template = "resources/algorithm.html"
+template = "notes/algorithm.html"
 description = "Trust Region Policy Optimization, or TRPO, is a policy gradient method in reinforcement learning that avoids parameter updates that change the policy too much with a KL divergence constraint on the size of the policy update at each iteration."
 
 [extra]

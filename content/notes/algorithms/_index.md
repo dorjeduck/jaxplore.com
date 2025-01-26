@@ -3,7 +3,7 @@ title = "Algorithms"
 description = "Reinforcement Learning Algorithms"
 sort_by = "slug"
 weight = 1
-template = "resources/algorithms.html"
+template = "notes/algorithms.html"
 +++
 
 ### Taxonomy of Reinforcement Learning Algorithms (2018)
