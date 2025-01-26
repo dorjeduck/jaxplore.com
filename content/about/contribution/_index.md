@@ -6,6 +6,17 @@ template = "about/about.html"
 
 Welcome to **jaxplore.com**—a [Zola](https://www.getzola.org/)-based site! Contributions for the **resources** and **notes** sections are very welcome, whether you're adding new content or improving existing materials.
 
+<br>
+
+### No Technical Expertise Required
+
+<br>
+
+* Basic markdown knowledge sufficient
+* No Zola-specific skills needed
+
+<br>
+
 ### Repository and Content Location
 
 
@@ -15,6 +26,8 @@ Welcome to **jaxplore.com**—a [Zola](https://www.getzola.org/)-based site! Con
   - [content/notes](https://github.com/dorjeduck/jaxplore.com/tree/main/content/notes)
 
 <br>
+
+
 
 ### Steps to Contribute
 
@@ -67,11 +80,6 @@ Welcome to **jaxplore.com**—a [Zola](https://www.getzola.org/)-based site! Con
 
    <br>
 
-### No Technical Expertise Required
 
-<br>
-
-* Basic markdown knowledge sufficient
-* No Zola-specific skills needed
 
 Thank you for contributing!  

@@ -16,6 +16,7 @@ Resources and ideas about Reinforcement Learning using JAX. Contribution are mos
 
 ## Contact
 
-[https://github.com/dorjeduck](https://github.com/dorjeduck)
+Find me on [github](https://github.com/dorjeduck) or email me at `martin.dudek [at] gmail [dot] com`.
+
 
 
