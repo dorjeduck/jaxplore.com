@@ -25,6 +25,7 @@ img_width = args.width
 spacing = args.spacing
 ALWAYS_BLUE_FIRST = args.always_blue_first
 
+
 # Split text into lines
 text = sys.argv[1].upper()  # Convert input text to uppercase
 lines = text.split("_")
@@ -132,7 +133,18 @@ def get_letter_grid(letter):
         ],
         "I": [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1)],
         "J": [(0, 2), (1, 2), (2, 2), (3, 2), (4, 2), (4, 1), (4, 0), (3, 0)],
-        "K": [(0, 0), (1, 0), (2, 0), (2, 1), (3, 0), (3, 2), (4, 0), (4, 2)],
+        "K": [
+            (0, 0),
+            (0, 2),
+            (1, 0),
+            (1, 2),
+            (2, 0),
+            (2, 1),
+            (3, 0),
+            (3, 2),
+            (4, 0),
+            (4, 2),
+        ],
         "L": [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2)],
         "M": [
             (0, 0),
@@ -278,10 +290,11 @@ y_offset = (
 
 n = 0
 for i, line in enumerate(lines):
+    
     line_width = len(line) * (3 * square_size + 4 * spacing) - spacing
     x_offset = (img_width - line_width) // 2  # Horizontal centering for each line
     for j, letter in enumerate(line):
-
+        
         grid = get_letter_grid(letter)
         for y, x in grid:
             color = (
@@ -289,12 +302,13 @@ for i, line in enumerate(lines):
                 if ALWAYS_BLUE_FIRST
                 else colors[n % len(colors)]
             )
-
+            
             x1 = x_offset + x * (square_size + spacing)
             y1 = y_offset + y * (square_size + spacing)
             x2 = x1 + square_size
             y2 = y1 + square_size
             draw.rectangle([x1, y1, x2, y2], fill=color)
+        
         x_offset += 3 * square_size + 4 * spacing
         n += 1  # Add spacing between letters
     y_offset += (
