@@ -5,7 +5,7 @@
     /* Aligns with the text baseline */
 }
 
-.video-date {
+.date {
     color: gray;
 }
 
@@ -61,7 +61,7 @@ html[data-theme='dark'] .img-dark {
 .breadcrumbs {
     font-size: 0.9rem;
     margin-bottom: -0.5rem;
-    color: #666;
+    color: gray;
 }
 
 .breadcrumbs ul {
@@ -91,6 +91,8 @@ html[data-theme='dark'] .img-dark {
 .breadcrumbs li:last-child::after {
     content: "";
 }
+
+
 
 
 

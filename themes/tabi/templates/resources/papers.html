@@ -15,14 +15,14 @@
             <h2>Papers:</h2>
             
             <ul>
-            {% for page in section.pages %}
-            <li><a href="#{{ page.title | slugify }}">{{ page.title }}</a></li>
+            {% for page in section.pages | reverse %}
+            <li><a href="#{{ page.title | slugify }}">{{ page.title }}</a>, <span class="date">{{ page.date | date(format="%B %Y") }}</span></li>
             {% endfor %}
             </ul>
         </nav>
         <br>
       
-            {% for page in section.pages %}
+            {% for page in section.pages | reverse %}
            
                 <!-- Paper Title and Link -->
                 <h2 id="{{ page.title | slugify }}">

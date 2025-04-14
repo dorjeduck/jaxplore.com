@@ -14,7 +14,7 @@
 
         <div class="subsections">
             <ul>
-                {% for page in section.pages %}
+                {% for page in section.pages | reverse %}
                 <li>
                     <h3>
                         {% if page.extra.asin %}
