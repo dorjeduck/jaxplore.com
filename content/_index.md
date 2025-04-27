@@ -1,5 +1,5 @@
 +++
-title = "Latest Posts"
+title = "latest"
 
 [extra]
 header = { title = "JAX and the Art of Reinforcement Learning", img = "", img_alt = "yeah" }
