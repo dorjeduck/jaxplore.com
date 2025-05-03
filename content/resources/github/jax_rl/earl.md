@@ -1,5 +1,5 @@
 +++
-title = "earl"
+title = "Earl"
 description = "Reinforcement learning with Equinox"
 template = "resources/github_repo.html"
 

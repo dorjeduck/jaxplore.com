@@ -1,5 +1,5 @@
 +++
-title = "orbax"
+title = "Orbax"
 description = "Orbax provides common checkpointing and persistence utilities for JAX users."
 template = "resources/github_repo.html"
 
