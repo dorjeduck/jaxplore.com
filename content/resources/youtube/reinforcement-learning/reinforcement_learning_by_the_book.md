@@ -1,6 +1,6 @@
 +++
 title = "Reinforcement Learning By the Book"
-date = "2023-05-23"
+date = "2022-10-24"
 template = "resources/youtube_video.html"
 
 [extra]

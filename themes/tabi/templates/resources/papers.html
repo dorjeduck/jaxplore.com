@@ -23,16 +23,18 @@
         <br>
       
             {% for page in section.pages | reverse %}
-           
+            
                 <!-- Paper Title and Link -->
                 <h2 id="{{ page.title | slugify }}">
+                    <br/>
                     {% if page.extra.web %}
+                    
                         <a href="{{ page.extra.web }}" target="_blank">{{ page.title }}</a>
                     {% else %}
-                        {{ page.title }}
+                       {{ page.title }}
                     {% endif %}
                 </h2>
-
+                
                 <!-- Authors -->
                 {% if page.extra.authors %}
                     <strong>Authors:</strong> {{ page.extra.authors }}
@@ -57,7 +59,10 @@
                 {% if page.extra.abstract %}
                     <p><strong>Abstract</strong>: {{ page.extra.abstract | safe}}</p>
                 {% endif %}
-          <br>
+                <a href="#" class="back-top">↑ back to top </a>
+            <br/>
+           
+           
             {% endfor %}
      
     </main>
