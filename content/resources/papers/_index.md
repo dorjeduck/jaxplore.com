@@ -1,6 +1,6 @@
 +++
 title = "Papers"
-description = "A curated collection of papers focusing on Reinforcement Learning."
+description = "A curated collection of papers on Reinforcement Learning."
 weight = 4
 sort_by = "weight"
 
