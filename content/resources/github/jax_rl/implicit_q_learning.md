@@ -1,5 +1,5 @@
 +++
-title = "implicit_q_learning"
+title = "Implicit Q-Learning"
 description = "This repository contains the official implementation of Offline Reinforcement Learning with Implicit Q-Learning"
 template = "resources/github_repo.html"
 
