@@ -1,0 +1,14 @@
++++
+title = "A Minimalist Approach to Offline Reinforcement Learning"
+date = "2021-06-12"
+weight = 20210612
+
+template="resources/paper.html"
+
+[extra]
+web = "https://arxiv.org/abs/2106.06860"
+
+author = "Scott Fujimoto, Shixiang Shane Gu"
+
+abstract = """Offline reinforcement learning (RL) defines the task of learning from a fixed batch of data. Due to errors in value estimation from out-of-distribution actions, most offline RL algorithms take the approach of constraining or regularizing the policy with the actions contained in the dataset. Built on pre-existing RL algorithms, modifications to make an RL algorithm work offline comes at the cost of additional complexity. Offline RL algorithms introduce new hyperparameters and often leverage secondary components such as generative models, while adjusting the underlying RL algorithm. In this paper we aim to make a deep RL algorithm work while making minimal changes. We find that we can match the performance of state-of-the-art offline RL algorithms by simply adding a behavior cloning term to the policy update of an online RL algorithm and normalizing the data. The resulting algorithm is a simple to implement and tune baseline, while more than halving the overall run time by removing the additional computational overhead of previous methods."""
++++
