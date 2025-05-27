@@ -1,5 +1,5 @@
 +++
-title = "WsJAX-Corl"
+title = "JAX-Corl"
 description = "Clean single-file implementation of offline RL algorithms in JAX"
 template = "resources/github_repo.html"
 
